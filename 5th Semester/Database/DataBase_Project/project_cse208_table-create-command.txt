@@ -1,0 +1,316 @@
+CREATE TABLE `Employee`
+(
+  `Designation` Varchar(20),
+  `Department` Varchar(20),
+  `Join_Date` Varchar(20),
+  `ssn` Varchar(20)
+)
+;
+
+CREATE INDEX `Index30` ON `Employee` (`ssn`)
+;
+
+ALTER TABLE `Employee` ADD  PRIMARY KEY (`ssn`)
+;
+
+CREATE TABLE `Person`
+(
+  `First_Name` Varchar(20),
+  `Last_Name` Varchar(20),
+  `Email_Address` Varchar(20),
+  `Phone_Number` Varchar(20),
+  `ssn` Varchar(20),
+  `Date_Of_Birth` Varchar(20)
+)
+;
+
+ALTER TABLE `Person` ADD  PRIMARY KEY (`ssn`)
+;
+
+CREATE TABLE `Orders`
+(
+  `Order_ID` Varchar(20),
+  `Order_Date` Varchar(20),
+  `Status`Varchar(20),
+  `Shippent_Duration` Varchar(20),
+  `Payment_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index15` ON `Orders` (`Payment_ID`)
+;
+
+ALTER TABLE `Orders` ADD  PRIMARY KEY (`Order_ID`)
+;
+
+
+CREATE TABLE `Customer`
+(
+  `Customer_ID` Varchar(20),
+  `First_Name` Varchar(20),
+  `Last_Name` Varchar(20),
+  `Phone_Number` Varchar(20),
+  `Email_Address` Varchar(20),
+  `Customer_Type` Varchar(20)
+)
+;
+
+ALTER TABLE `Customer` ADD  PRIMARY KEY (`Customer_ID`)
+;
+
+
+CREATE TABLE `Zip Code`
+(
+  `State` Varchar(20),
+  `Zipcode_ID` Varchar(20),
+  `City` Varchar(20),
+  `Address_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index6` ON `Zip Code` (`Address_ID`)
+;
+
+ALTER TABLE `Zip Code` ADD  PRIMARY KEY (`Zipcode_ID`)
+;
+
+
+CREATE TABLE `Reviews`
+(
+  `Quality_Rating` Varchar(20),
+  `Defect%` Varchar(20),
+  `Review_ID` Varchar(20),
+  `Review_Date` Varchar(20)
+)
+;
+
+ALTER TABLE `Reviews` ADD  PRIMARY KEY (`Review_ID`)
+;
+
+
+CREATE TABLE `Product`
+(
+  `Product_ID` Varchar(20),
+  `Product_Name` Varchar(20),
+  `Available_Number` Varchar(20),
+  `Group_ID` Varchar(20),
+  `Supplier_ID` Varchar(20),
+  `Review_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index1` ON `Product` (`Group_ID`)
+;
+
+CREATE INDEX `Index2` ON `Product` (`Supplier_ID`)
+;
+
+CREATE INDEX `Index3` ON `Product` (`Review_ID`)
+;
+
+ALTER TABLE `Product` ADD  PRIMARY KEY (`Product_ID`)
+;
+
+
+CREATE TABLE `Supplier`
+(
+  `Supplier_ID` Varchar(20),
+  `Supplier_Name` Varchar(20),
+  `Supply_Quantity` Varchar(20)
+)
+;
+
+ALTER TABLE `Supplier` ADD  PRIMARY KEY (`Supplier_ID`)
+;
+
+
+CREATE TABLE `Payment`
+(
+  `Payment_ID` Varchar(20),
+  `Payment_Mode` Varchar(20),
+  `Card_Type` Varchar(20),
+  `Card_Number` Varchar(20),
+  `CVV` Varchar(20),
+  `Name_On_Card` Varchar(20),
+  `Customer_ID` Varchar(20),
+  `Visit_Number` Varchar(20)
+)
+;
+
+CREATE INDEX `Index11` ON `Payment` (`Customer_ID`)
+;
+
+ALTER TABLE `Payment` ADD  PRIMARY KEY (`Payment_ID`)
+;
+
+
+CREATE TABLE `Employees`
+(
+  `Employee_ID` Varchar(20),
+  `Employee_Name` Varchar(20),
+  `SSN` Varchar(20),
+  `Designation` Varchar(20),
+  `Employee_Type` Varchar(20),
+  `Salary` Varchar(20),
+  `Payment_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index8` ON `Employees` (`Payment_ID`)
+;
+
+ALTER TABLE `Employees` ADD  PRIMARY KEY (`Employee_ID`)
+;
+
+
+CREATE TABLE `Bill`
+(
+  `Billing_ID` Varchar(20),
+  `Billing_Date` Varchar(20),
+  `Amount_Paid` Varchar(20),
+  `Voucher_ID` Varchar(20),
+  `Payment_ID` Varchar(20),
+  `Order_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index4` ON `Bill` (`Voucher_ID`)
+;
+
+CREATE INDEX `Index9` ON `Bill` (`Payment_ID`)
+;
+
+CREATE INDEX `Index16` ON `Bill` (`Order_ID`)
+;
+
+ALTER TABLE `Bill` ADD  PRIMARY KEY (`Billing_ID`)
+;
+
+
+CREATE TABLE `Voucher`
+(
+  `Voucher_ID` Varchar(20),
+  `Discount%` Varchar(20)
+)
+;
+
+ALTER TABLE `Voucher` ADD  PRIMARY KEY (`Voucher_ID`)
+;
+
+
+CREATE TABLE `Address`
+(
+  `Address_ID` Varchar(20),
+  `Apartment_Number` Varchar(20),
+  `Street` Varchar(20),
+  `Apartment_Name` Varchar(20),
+  `Customer_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index5` ON `Address` (`Customer_ID`)
+;
+
+ALTER TABLE `Address` ADD  PRIMARY KEY (`Address_ID`)
+;
+
+CREATE TABLE `Product Group`
+(
+  `Group_ID` Varchar(20),
+  `Group_Name` Varchar(20)
+)
+;
+
+ALTER TABLE `Product Group` ADD  PRIMARY KEY (`Group_ID`)
+;
+
+
+CREATE TABLE `Order Product`
+(
+  `Quantity`Varchar(20),
+  `Product_ID` Varchar(20),
+  `Order_ID` Varchar(20)
+)
+;
+
+CREATE INDEX `Index12` ON `Order Product` (`Product_ID`)
+;
+
+CREATE INDEX `Index13` ON `Order Product` (`Order_ID`)
+;
+
+ALTER TABLE `Order Product` ADD  PRIMARY KEY (`Product_ID`,`Order_ID`)
+;
+
+
+CREATE TABLE `Product Details`
+(
+  `Product_ID` Varchar(20),
+  `Weight` Varchar(20),
+  `Width` Varchar(20),
+  `Height` Varchar(20),
+  `Colour` Varchar(20)
+)
+;
+
+ALTER TABLE `Product Details` ADD  PRIMARY KEY (`Product_ID`)
+;
+
+
+CREATE TABLE `Customer Category`
+(
+  `Customer_Category` Varchar(20),
+  `Customer_ID` Varchar(20)
+)
+;
+
+ALTER TABLE `Customer Category` ADD  PRIMARY KEY (`Customer_ID`)
+;
+
+
+
+##################### Relationship for all tables ####################
+ALTER TABLE `Product` ADD CONSTRAINT `belongs to` FOREIGN KEY (`Group_ID`) REFERENCES `Product Group` (`Group_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Product` ADD CONSTRAINT `supplies` FOREIGN KEY (`Supplier_ID`) REFERENCES `Supplier` (`Supplier_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Product` ADD CONSTRAINT `are given` FOREIGN KEY (`Review_ID`) REFERENCES `Reviews` (`Review_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Bill` ADD CONSTRAINT `is included` FOREIGN KEY (`Voucher_ID`) REFERENCES `Voucher` (`Voucher_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Address` ADD CONSTRAINT `will have` FOREIGN KEY (`Customer_ID`) REFERENCES `Customer` (`Customer_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Zip Code` ADD CONSTRAINT `will zip` FOREIGN KEY (`Address_ID`) REFERENCES `Address` (`Address_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Employees` ADD CONSTRAINT `monitors` FOREIGN KEY (`Payment_ID`) REFERENCES `Payment` (`Payment_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Bill` ADD CONSTRAINT `Generates` FOREIGN KEY (`Payment_ID`) REFERENCES `Payment` (`Payment_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Payment` ADD CONSTRAINT `makes` FOREIGN KEY (`Customer_ID`) REFERENCES `Customer` (`Customer_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Order Product` ADD CONSTRAINT `product order relation` FOREIGN KEY (`Product_ID`) REFERENCES `Product` (`Product_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Order Product` ADD CONSTRAINT `contains` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Orders` ADD CONSTRAINT `Orders` FOREIGN KEY (`Payment_ID`) REFERENCES `Payment` (`Payment_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Bill` ADD CONSTRAINT `is billed` FOREIGN KEY (`Order_ID`) REFERENCES `Orders` (`Order_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Product Details` ADD CONSTRAINT `has details` FOREIGN KEY (`Product_ID`) REFERENCES `Product` (`Product_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;
+
+ALTER TABLE `Customer Category` ADD CONSTRAINT `belong` FOREIGN KEY (`Customer_ID`) REFERENCES `Customer` (`Customer_ID`) ON DELETE RESTRICT ON UPDATE RESTRICT
+;

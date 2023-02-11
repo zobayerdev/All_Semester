@@ -1,0 +1,37 @@
+# depslib dependency file v1.0
+1499795045 source:f:\bubt\compiler\compilerlabfinal\compilerlabsummer2017\lexicalanalysispart\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+
+1499878747 source:f:\compiler\lab\lab\lexicalanalysispart\lexicalanalysispart\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+
+1499878747 source:f:\compiler\lab\lab\lexicalanalyzer\lexicalanalysispart\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+
+1535956375 source:d:\amirul\bubt\compiler\code\lexicalanalyzer\lexicalanalysispart\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+
+1535956375 source:d:\amirul\bubt\compiler\code\complete_lexicalanalyzer\lexicalanalysis\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+
+1669005179 source:d:\varsity\8th semester\cse - 324 [compiler design lab]\project\lexical analysis\lexemecheck.cpp
+	<iostream>
+	<string>
+	<fstream>
+	<string.h>
+

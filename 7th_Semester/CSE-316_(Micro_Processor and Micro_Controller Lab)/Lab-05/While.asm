@@ -1,0 +1,10 @@
+MOV AH,1
+INT 21H
+W:
+CMP AL,'#'
+JE P
+MOV AH,1
+INT 21H
+JMP W
+P:
+

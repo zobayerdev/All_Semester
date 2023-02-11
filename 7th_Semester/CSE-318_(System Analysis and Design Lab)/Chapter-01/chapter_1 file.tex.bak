@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+ a4paper,
+ total={170mm,257mm},left=20mm,top=10mm}
+
+\begin{document}
+
+
+\section{Context Level Diagram}
+Context diagrams show the interactions between a system and other actors (external factors) with which the system is designed to interface. 
+
+\section{Context Level Diagram Component}
+There are three Components in Context label Diagram
+\begin{itemize}
+\item A Process
+\item A Entity
+\item A Data Flow
+\end{itemize}
+
+
+All Context Label Diagram Component 
+Details
+
+\section{Entity Details}
+
+\section{Registration}
+From the registration page, the admin and the user could create an account (bank account or card) to give some personal information. Besides for backup, admin will show the whole info from the saved file in Database. After creating an account user will get 500 BDT in his/her account automatically.
+
+\section{Log-in}
+From the registration page anyone will get a button for log-in. Only they could log-in who have registered before.
+
+\section{Withdraw}
+Users could withdraw any amount of currency when they want. But if they do have not a sufficient amount then he/she will get an alert message and could not transact.
+
+\section{Transfer}
+The User could transfer at any time the valid currency to any type of account
+
+\section{Bill Pay}
+The user will pay any type of bill from here. Such as University bills, shopping bills, current bills, restaurant bills, etc.
+
+\section{Payment}
+The user will pay any type of payment from here. Such as salary, University bills, shopping bills, current bills, restaurant bills, any ticket bills, etc.
+
+\section{Crypto Currency}
+The user could exchange crypto-currency. The user will show the currency, transfer the currency and also buy and sell the currency from this software.
+
+\section{Add Money}
+The user could add money to his/her account from all types of accounts there are Bikash, Nogod, Rocket, Upay, Master-card by this software.
+
+\section{Donation}
+Making a donation through Charity ATM is quick and easy. Consumers have the option of donating to a number of charities at participating ATM locations.
+\end{document}
