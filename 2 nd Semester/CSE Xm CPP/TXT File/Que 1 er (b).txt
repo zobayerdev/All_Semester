@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+class Name_String
+{
+public:
+    string string1,string2;
+    Name_String()
+    {
+        string1="Zobayer";
+    }
+    Name_String(string s,int length)
+    {
+        string2=s;
+    }
+};
+int main()
+{
+    string s,s3;
+    cin>>s;
+    int l=s.length();
+    Name_String s1;
+    Name_String s2(s,l);
+
+    s3= s1.string1+s2.string2;
+    cout<<s3<<endl;
+    return 0;
+}
